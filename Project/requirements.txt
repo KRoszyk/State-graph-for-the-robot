@@ -1,6 +1,0 @@
-numpy
-networkx
-robopy
-matplotlib
-python-statemachine
-vtk
