@@ -1,0 +1,87 @@
+!!python/object:networkx.classes.multidigraph.MultiDiGraph
+_adj: &id015
+  Endswitch_Error:
+    Robot_Idle: &id009
+      0: {}
+  Gripper_Activation:
+    Lifing_Arm_W_Wood: &id005
+      0: {}
+  Gripper_Deactivation:
+    Lifting_Arm_WO_Wood: &id006
+      0: {}
+  Lifing_Arm_W_Wood:
+    Rotation_I_Moving_To_E2: &id013
+      0: {}
+  Lifting_Arm_WO_Wood:
+    Rotation_II_Moving_To_E1: &id011
+      0: {}
+  Lowering_Arm_To_Pickup:
+    Gripper_Activation: &id003
+      0: {}
+  Lowering_Arm_To_Place:
+    Gripper_Deactivation: &id004
+      0: {}
+  Robot_Idle:
+    Lowering_Arm_To_Pickup: &id007
+      0: {}
+  Rotation_II_Moving_To_E1:
+    Endswitch_Error: &id001
+      0: {}
+    Robot_Idle: &id010
+      0: {}
+    Rotation_II_Moving_To_E1: &id012
+      0: {}
+  Rotation_I_Moving_To_E2:
+    Endswitch_Error: &id002
+      0: {}
+    Lowering_Arm_To_Place: &id008
+      0: {}
+    Rotation_I_Moving_To_E2: &id014
+      0: {}
+_node: &id017
+  Endswitch_Error: {}
+  Gripper_Activation: {}
+  Gripper_Deactivation: {}
+  Lifing_Arm_W_Wood: {}
+  Lifting_Arm_WO_Wood: {}
+  Lowering_Arm_To_Pickup: {}
+  Lowering_Arm_To_Place: {}
+  Robot_Idle: {}
+  Rotation_II_Moving_To_E1: {}
+  Rotation_I_Moving_To_E2: {}
+_pred:
+  Endswitch_Error:
+    Rotation_II_Moving_To_E1: *id001
+    Rotation_I_Moving_To_E2: *id002
+  Gripper_Activation:
+    Lowering_Arm_To_Pickup: *id003
+  Gripper_Deactivation:
+    Lowering_Arm_To_Place: *id004
+  Lifing_Arm_W_Wood:
+    Gripper_Activation: *id005
+  Lifting_Arm_WO_Wood:
+    Gripper_Deactivation: *id006
+  Lowering_Arm_To_Pickup:
+    Robot_Idle: *id007
+  Lowering_Arm_To_Place:
+    Rotation_I_Moving_To_E2: *id008
+  Robot_Idle:
+    Endswitch_Error: *id009
+    Rotation_II_Moving_To_E1: *id010
+  Rotation_II_Moving_To_E1:
+    Lifting_Arm_WO_Wood: *id011
+    Rotation_II_Moving_To_E1: *id012
+  Rotation_I_Moving_To_E2:
+    Lifing_Arm_W_Wood: *id013
+    Rotation_I_Moving_To_E2: *id014
+_succ: *id015
+adjlist_inner_dict_factory: &id016 !!python/name:builtins.dict ''
+adjlist_outer_dict_factory: *id016
+edge_attr_dict_factory: *id016
+edge_key_dict_factory: *id016
+graph: {}
+graph_attr_dict_factory: *id016
+node_attr_dict_factory: *id016
+node_dict_factory: *id016
+nodes: !!python/object:networkx.classes.reportviews.NodeView
+  _nodes: *id017
